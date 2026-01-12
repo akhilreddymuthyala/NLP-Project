@@ -10,7 +10,7 @@ from datetime import datetime
 
 # Page configuration
 st.set_page_config(
-    page_title="NASA Abstract Classifier",
+    page_title="NLP-Based Categorization of Space Mission Abstracts",
     page_icon="🚀",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -170,7 +170,7 @@ def predict_abstract(input_text, model, vectorizer):
 # Main app
 def main():
     # Header
-    st.markdown('<p class="main-header">🚀 NASA Space Mission Abstract Classifier</p>', unsafe_allow_html=True)
+    st.markdown('<p class="main-header">🚀 Space Mission Abstract Classifier</p>', unsafe_allow_html=True)
     st.markdown("---")
     
     # Load models
@@ -180,7 +180,7 @@ def main():
         st.stop()
     
     # Sidebar
-    st.sidebar.image("https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo@2x.png", width=200)
+    st.sidebar.image("image.png", width=200)
     st.sidebar.title("Navigation")
     page = st.sidebar.radio("Go to", ["🏠 Home", "🔮 Classify Abstract", "📊 Model Statistics", "📈 Visualizations"])
     
@@ -191,7 +191,7 @@ def main():
     
     # HOME PAGE
     if page == "🏠 Home":
-        st.title("Welcome to NASA Abstract Classifier")
+        st.title("Welcome to Space Mission Abstract Classifier")
         
         col1, col2, col3 = st.columns(3)
         
@@ -207,7 +207,7 @@ def main():
         st.markdown("""
         ### 📖 About This Project
         
-        This NLP-based system automatically classifies NASA space mission abstracts into scientific categories 
+        This NLP-based system automatically classifies space mission abstracts into scientific categories 
         using advanced Machine Learning and Natural Language Processing techniques.
         
         **Key Features:**
@@ -557,7 +557,7 @@ def main():
     st.markdown(
         """
         <div style='text-align: center; color: gray;'>
-            <p>🚀 NASA Space Mission Abstract Classifier | Powered by Machine Learning & NLP</p>
+            <p>🚀 Space Mission Abstract Classifier | Powered by Machine Learning & NLP</p>
             <p>Built with Streamlit | © 2026</p>
         </div>
         """,
